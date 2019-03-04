@@ -1,0 +1,15 @@
+<snippet>
+    <content><![CDATA[
+CREATE OR REPLACE FUNCTION ${1:${TM_FILENAME/(.+)..+..+/$1/}}(${2:parameter} ${3:type}) RETURNS ${4:return_type} as \$\$
+DECLARE
+/* Variables */
+${5}
+BEGIN
+${0}
+END; \$\$
+LANGUAGE plpgsql;
+]]></content>
+    <tabTrigger>CORF</tabTrigger>
+    <scope>source.sql</scope>
+    <description> Snippet for creating a new procedure </description>
+</snippet>

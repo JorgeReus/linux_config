@@ -1,0 +1,10 @@
+<snippet>
+    <content><![CDATA[
+CREATE TYPE ${1:${TM_FILENAME/(.+)..+..+/$1/}} as {
+    ${2:var_1} ${3:type_1}
+};
+]]></content>
+    <tabTrigger>CT</tabTrigger>
+    <scope>source.sql</scope>
+    <description> Snippet for creating a new type </description>
+</snippet>

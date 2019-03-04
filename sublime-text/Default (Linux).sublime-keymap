@@ -1,0 +1,13 @@
+[
+    { "keys": ["ctrl+¡"], "command": "indent" },
+    { "keys": ["ctrl+'"], "command": "unindent" },
+    { "keys": ["ctrl+ç"], "command": "toggle_comment", "args": { "block": false } },
+    { "keys": ["ctrl+shift+ç"], "command": "toggle_comment", "args": { "block": true } },
+    {
+        "keys": ["super+shift+w"],
+        "command": "toggle_setting",
+        "args": {
+            "setting": "word_wrap"
+        }
+    }
+]

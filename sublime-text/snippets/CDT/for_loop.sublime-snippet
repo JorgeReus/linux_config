@@ -1,0 +1,11 @@
+<snippet>
+    <content><![CDATA[
+FOR ${1:iterator} IN ${2:query}
+LOOP
+    $0
+END LOOP:
+]]></content>
+    <tabTrigger>FL</tabTrigger>
+    <scope>source.sql</scope>
+    <description> Snippet for creating a for-loop construct </description>
+</snippet>
