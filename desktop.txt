@@ -1,0 +1,35 @@
+─ K Desktop Environtment (KDE).
+─ Latte Dock.
+
+Temas:
+─ Adapta Nokto para GTK 2.
+─ Adapta Nokto para GTK 3.
+─ Adapta Nokto para Telegram.
+─ Adapta Nokto para Kvantum.
+─ Nilium para Plasma (también hay un Adapta Nokto para plasma).
+─ El cursor de Deepin.
+─ SierraBreezeEnhanced para la decoración de ventanas (Aurorae).
+─ Los colores de Adapta Nokto.
+─ Los colores de Monochrome KDE (este color lo usé con ciertas barras de títulos).
+
+Plasmoides:
+─ Menú global (lo trae KDE)
+─ Simple Menu.
+─ Tareas de Latte (lo trae Latte).
+─ Bandeja del sistema (lo trae KDE).
+─ Event Calendar.
+─ Wheater Widget.
+
+Extensiones de Chromium:
+─ Stylus para el estilo de YouTube y Twitter que se muestra en el vídeo (tengo otras páginas que también se ven así, pero por privacidad no los mostré).
+─ FVD Speed Dial para cambiar el estilo de la nueva pestaña.
+
+Personalizaciones (ésto es al gusto de cada quién):
+─ Elige el estilo que quieras para tu página web, y si quieres modificas el CSS, todo desde Stylus.
+─ En la configuración de Wine (winecfg) se puede cambiar los colores de Wine sin instalar ningún tema en la pestaña de «integración de escritorio».
+─ Para un color distinto en la barra de títulos de alguna aplicación, hay que crear una regla de ventana en las preferencias del sistema. Ahí aparecen todas las opciones, sólo es dejarse llevar.
+─ Para una opacidad distinta en la barra de títulos en alguna aplicación, hay que modificar la decoración SierraBreezeEnhanced y en la pestaña de «sustituciones específicas para la ventana» añadir las reglas que sean. Nuevamente es sólo dejarse llevar.
+─ Los fondos de pantallas que usé los tomé de wallhaven.
+─ KDE trae varios efectos, como la de las ventanas gelatinosas o la lampara mágica. Activa los que quieras en las preferencias del sistema.
+
+También usé los iconos «Papirus Dark», y «Arc» para los botones de GTK.
