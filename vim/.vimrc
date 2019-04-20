@@ -14,7 +14,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-Plugin 'JamshedVesuna/vim-markdown-preview'
+Plugin 'vim-instant-markdown' 
 call vundle#end() 
 filetype plugin indent on 
 
@@ -90,7 +90,5 @@ let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 " ## MARKDOWN CONFIG ##
 " #####################
 "
-" Change the markdown preview hotkey to <Ctrl><m>
-let vim_markdown_preview_hotkey='<C-m>'
-let vim_markdown_preview_browser='Firefox'
-let vim_markdown_preview_github=1
+filetype plugin on
+set shell=bash\ -i

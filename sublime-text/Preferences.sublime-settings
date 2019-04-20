@@ -1,15 +1,15 @@
 {
 	"color_scheme": "Packages/Theme - Cobalt2/cobalt2.tmTheme",
+	"font_face": "Fira Code",
+	"font_size": 10,
+	"highlight_line": true,
 	"ignored_packages":
 	[
 		"Vintage"
 	],
+	"show_line_endings": true,
 	"tab_size": 4,
 	"theme": "Cobalt2.sublime-theme",
 	"translate_tabs_to_spaces": true,
-    "word_wrap": "true",
-    "highlight_line": true,
-    "show_line_endings": true,
-    "font_face": "Fira Code",
-    "font_size": 10
+	"word_wrap": "true"
 }

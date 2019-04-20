@@ -22,7 +22,6 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 plugins=(
   git
   zsh-autosuggestions
-  anaconda
 )
 
 source $ZSH/oh-my-zsh.sh
