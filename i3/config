@@ -15,7 +15,7 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 font pango:DejaVu Sans Mono, Awesome 10
 
 for_window [class="^.*"] border pixel 0
-for_window [class=__focused__] border pixel 2
+
 
 new_window pixel 0
 new_float pixel 0
