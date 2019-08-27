@@ -26,10 +26,10 @@ gaps outer 0
 
 # use these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
-set $up l
+set $up j
 set $down k
-set $left j
-set $right semicolon
+set $left h
+set $right l
 
 # use Mouse+Mod4 to drag floating windows to their wanted position
 floating_modifier Mod4
@@ -72,10 +72,10 @@ bindsym Mod4+Shift+Up move up
 bindsym Mod4+Shift+Right move right
 
 # split in horizontal orientation
-bindsym Mod4+h split h
+bindsym Alt+h split h
 
 # split in vertical orientation
-bindsym Mod4+v split v
+bindsym Alt+v split v
 
 # enter fullscreen mode for the focused container
 bindsym Mod4+f fullscreen toggle
