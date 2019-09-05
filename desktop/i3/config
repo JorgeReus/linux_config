@@ -16,7 +16,7 @@ font pango:DejaVu Sans Mono, Awesome 10
 
 for_window [class="^.*"] border pixel 0
 
-
+smart_gaps on
 new_window pixel 0
 new_float pixel 0
 hide_edge_borders none
@@ -169,5 +169,5 @@ bindsym Mod4+r mode "resize"
 #}
 exec_always --no-startup-id "dunst --config ~/.config/dunst/dunstrc"
 exec_always feh --randomize --bg-fill ~/Pictures 
-exec_always --no-startup-id "compton -b"
+exec_always --no-startup-id "compton -b --config ~/.config/compton/compton.conf"
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
