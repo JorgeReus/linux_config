@@ -7,13 +7,34 @@ POWERLEVEL9K_LINUX_ICON='\uf306'
 
 #Paths
 export ZSH="/home/reus/.oh-my-zsh"
-export PATH="/home/reus/anaconda3/bin:$PATH"
-export PATH="$HOME/.cargo/bin:$PATH"
-export SDKMAN_DIR="/home/reus/.sdkman" 
-export NVM_DIR="$HOME/.nvm"
-alias lsdk="source /home/reus/.sdkman/bin/sdkman-init.sh"
-alias lconda=". /home/reus/anaconda3/etc/profile.d/conda.sh"
-alias lnvm='[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"'
+nvm() {
+    unset -f nvm
+    export NVM_DIR=~/.nvm
+    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+    nvm "$@"
+}
+ 
+node() {
+    unset -f node
+    export NVM_DIR=~/.nvm
+    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+    node "$@"
+}
+ 
+npm() {
+    unset -f npm
+    export NVM_DIR=~/.nvm
+    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+    npm "$@"
+}
+
+#export PATH="/home/reus/anaconda3/bin:$PATH"
+#export PATH="$HOME/.cargo/bin:$PATH"
+#export SDKMAN_DIR="/home/reus/.sdkman" 
+#export NVM_DIR="$HOME/.nvm"
+#alias lsdk="source /home/reus/.sdkman/bin/sdkman-init.sh"
+#alias lconda=". /home/reus/anaconda3/etc/profile.d/conda.sh"
+#alias lnvm='[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"'
 
 #Theme
 ZSH_THEME="powerlevel9k/powerlevel9k"
@@ -77,4 +98,3 @@ POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%F{blue}\u2570\uf460%f "
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(ssh anaconda os_icon root_indicator dir dir_writable vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time  status)
 DISABLE_UPDATE_PROMPT=true
-
