@@ -167,7 +167,7 @@ bindsym Mod4+r mode "resize"
 #        position top
 #        status_command i3status
 #}
-exec_always --no-startup-id "dunst --config ~/.config/dunst/dunstrc"
+exec_always --no-startup-id "killall dunst &&dunst --config ~/.config/dunst/dunstrc"
 exec_always feh --randomize --bg-fill ~/Pictures 
-exec_always --no-startup-id "compton -b --config ~/.config/compton/compton.conf"
+exec_always --no-startup-id "killall compton && compton -b --config ~/.config/compton/compton.conf"
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
