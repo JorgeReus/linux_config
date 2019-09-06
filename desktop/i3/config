@@ -16,7 +16,7 @@ font pango:DejaVu Sans Mono, Awesome 10
 
 for_window [class="^.*"] border pixel 0
 
-
+smart_gaps on
 new_window pixel 0
 new_float pixel 0
 hide_edge_borders none
@@ -26,10 +26,10 @@ gaps outer 0
 
 # use these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
-set $up l
+set $up j
 set $down k
-set $left j
-set $right semicolon
+set $left h
+set $right l
 
 # use Mouse+Mod4 to drag floating windows to their wanted position
 floating_modifier Mod4
@@ -72,10 +72,10 @@ bindsym Mod4+Shift+Up move up
 bindsym Mod4+Shift+Right move right
 
 # split in horizontal orientation
-bindsym Mod4+h split h
+bindsym Mod1+h split h
 
 # split in vertical orientation
-bindsym Mod4+v split v
+bindsym Mod1+v split v
 
 # enter fullscreen mode for the focused container
 bindsym Mod4+f fullscreen toggle
@@ -167,7 +167,7 @@ bindsym Mod4+r mode "resize"
 #        position top
 #        status_command i3status
 #}
-exec_always --no-startup-id "dunst --config ~/.config/dunst/dunstrc"
+exec_always --no-startup-id "killall dunst &&dunst --config ~/.config/dunst/dunstrc"
 exec_always feh --randomize --bg-fill ~/Pictures 
-exec_always --no-startup-id "compton -b"
+exec_always --no-startup-id "killall compton && compton -b --config ~/.config/compton/compton.conf"
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
