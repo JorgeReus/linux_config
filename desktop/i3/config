@@ -23,6 +23,10 @@ hide_edge_borders none
 gaps inner 10
 gaps outer 0
 
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% #decrease sound volume
+
 
 # use these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
@@ -167,7 +171,7 @@ bindsym Mod4+r mode "resize"
 #        position top
 #        status_command i3status
 #}
-exec_always --no-startup-id "killall dunst &&dunst --config ~/.config/dunst/dunstrc"
+exec_always --no-startup-id "killall dunst && dunst --config ~/.config/dunst/dunstrc"
 exec_always feh --randomize --bg-fill ~/Pictures 
 exec_always --no-startup-id "killall compton && compton -b --config ~/.config/compton/compton.conf"
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
