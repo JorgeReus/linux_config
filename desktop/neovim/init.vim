@@ -41,3 +41,7 @@ nnoremap <A-h> :tabr<cr>
 nnoremap <A-t> :tabnew<cr>
 nnoremap <A-q> :tabclose<cr>
 
+" Save a buffer
+nnoremap <C-s> :w<cr>
+" Close & save buffer
+nnoremap <C-q> :wq<cr>
