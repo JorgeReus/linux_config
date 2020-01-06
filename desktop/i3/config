@@ -51,6 +51,9 @@ bindsym Mod4+d exec dmenu_run
 # installed.
 # bindsym Mod4+d exec --no-startup-id i3-dmenu-desktop
 
+# Fullscreen in container
+bindsym Mod4+Shift+f focus parent; fullscreen; focus child
+
 # change focus
 bindsym Mod4+$left focus left
 bindsym Mod4+$down focus down
@@ -171,7 +174,8 @@ bindsym Mod4+r mode "resize"
 #        position top
 #        status_command i3status
 #}
+
+exec --no-startup-id "compton --config ~/.config/compton/compton.conf"
 exec_always --no-startup-id "killall dunst && dunst --config ~/.config/dunst/dunstrc"
 exec_always feh --randomize --bg-fill ~/Pictures 
-exec_always --no-startup-id "killall compton && compton -b --config ~/.config/compton/compton.conf"
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh

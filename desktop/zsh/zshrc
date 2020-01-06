@@ -12,6 +12,7 @@ function git_prompt_info() {
 
 #Paths
 export ZSH="/home/reus/.oh-my-zsh"
+export PATH="$HOME/.cargo/bin:$PATH"
 nvm() {
     unset -f nvm
     export NVM_DIR=~/.nvm
@@ -49,6 +50,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 plugins=(
   git
   zsh-autosuggestions
+  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh

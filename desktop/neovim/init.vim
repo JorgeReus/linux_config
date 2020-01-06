@@ -5,6 +5,7 @@ Plug 'scrooloose/nerdTree'
 Plug 'bling/vim-airline'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
+Plug 'scrooloose/nerdcommenter'
 call plug#end()
 augroup myvimrchooks
     au!
@@ -22,6 +23,7 @@ set shiftwidth=2
 set number
 set relativenumber
 let mapleader="ñ"
+noremap - :call NERDComment(0,"toggle")<CR>
 noremap <silent> <C-n> :NERDTreeToggle<CR>
 " <Leader>f{char} to move to {char}
 map  <Leader>f <Plug>(easymotion-bd-f)
@@ -41,3 +43,7 @@ nnoremap <A-h> :tabr<cr>
 nnoremap <A-t> :tabnew<cr>
 nnoremap <A-q> :tabclose<cr>
 
+" Save a buffer
+nnoremap <C-s> :w<cr>
+" Close & save buffer
+nnoremap <C-q> :wq<cr>
