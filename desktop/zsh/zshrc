@@ -10,6 +10,12 @@ function git_prompt_info() {
   echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$ZSH_THEME_GIT_PROMPT_SUFFIX"
 }
 
+
+alias m8s='sudo microk8s.'
+
+autoload edit-command-line; zle -N edit-command-line
+bindkey '^e' edit-command-line
+
 #Paths
 export ZSH="/home/reus/.oh-my-zsh"
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -51,6 +57,7 @@ plugins=(
   git
   zsh-autosuggestions
   zsh-syntax-highlighting
+  zsh-expand-all
 )
 
 source $ZSH/oh-my-zsh.sh
