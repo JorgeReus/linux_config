@@ -56,7 +56,6 @@ plugins=(
   git
   zsh-autosuggestions
   zsh-syntax-highlighting
-  #zsh-expand-all
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -120,8 +119,4 @@ if [ -f '/home/reus/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/reus/g
 compinit
 _comp_options+=(globdots)
 
-
-if [[ -f ~/linux_config/desktop/zsh/aliases ]]; then
-    . ~/linux_config/desktop/zsh/aliases
-fi
-
+m8s() { sudo microk8s."$@"; }
