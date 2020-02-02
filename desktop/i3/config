@@ -39,7 +39,7 @@ set $right l
 floating_modifier Mod4
 
 # start a terminal
-bindsym Mod4+Return exec tilix
+bindsym Mod4+Return exec alacritty
 
 # kill focused window
 bindsym Mod4+Shift+q kill
@@ -115,6 +115,7 @@ bindsym Mod4+minus scratchpad show
 # Pavucontrol
 bindsym Mod4+p exec "pavucontrol"
 
+
 # switch to workspace
 bindsym Mod4+1 workspace 1
 bindsym Mod4+2 workspace 2
@@ -145,7 +146,8 @@ bindsym Mod4+Shift+c reload
 bindsym Mod4+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym Mod4+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-
+#Random Picture
+bindsym Mod4+Shift+p exec "feh --randomize --bg-fill ~/Pictures" 
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -181,5 +183,5 @@ bindsym Mod4+r mode "resize"
 
 exec --no-startup-id "compton --config ~/.config/compton/compton.conf"
 exec_always --no-startup-id "killall dunst && dunst --config ~/.config/dunst/dunstrc"
-exec_always feh --randomize --bg-fill ~/Pictures 
+exec feh --randomize --bg-fill ~/Pictures 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
