@@ -47,10 +47,6 @@ source "/home/reus/.sdkman/bin/sdkman-init.sh"
 #Theme
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
-
-#Git
-DISABLE_UNTRACKED_FILES_DIRTY="true"
-
 #Plugins
 plugins=(
   git
@@ -59,13 +55,16 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+#fpath+=("$HOME/.zsh/pure")
+#autoload -U promptinit; promptinit
+#prompt pure
 
 
 ###############################
 #      POWERLINE CONFIG       #
 ###############################
 
-if [[ -r /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
+if [[ -r /usr/local/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
 source /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 fi
 
@@ -107,7 +106,6 @@ POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%F{blue}\u2570\uf460%f "
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(ssh anaconda os_icon root_indicator dir dir_writable vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time  status)
 DISABLE_UPDATE_PROMPT=true
-
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=30'
 
