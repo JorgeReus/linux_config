@@ -60,7 +60,7 @@ alias jcert="java -jar /home/reus/HDD/software/etsviewer.jar"
 
 zstyle ':completion:*' menu select
 autoload -U compinit && compinit
-
+_comp_options+=(globdots)
 
 # zplug
 source ~/.zplug/init.zsh
@@ -73,3 +73,6 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=30'
 
 bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
+
+
+m8s() { sudo microk8s."$@";  }
