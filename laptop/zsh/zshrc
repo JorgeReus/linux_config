@@ -1,0 +1,75 @@
+###############################
+#      OH MY ZSH CONFIG       #
+###############################
+
+
+#Paths
+export EDITOR="nvim"
+export PATH="/home/$USER/anaconda3/bin:$PATH"
+export SDKMAN_DIR="/home/reus/.sdkman"
+source $HOME/.sdkman/bin/sdkman-init.sh
+source $HOME/.cargo/env
+export HISTFILE=~/.zsh_history
+export HISTSIZE=10000
+export SAVEHIST=10000
+
+nvm() {
+   unset -f nvm
+   export NVM_DIR=~/.nvm
+   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+   nvm "$@"
+}
+node() {
+   unset -f node
+   export NVM_DIR=~/.nvm
+   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+   node "$@"
+}
+npm() {
+   unset -f npm
+   export NVM_DIR=~/.nvm
+   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+   npm "$@"
+ }
+
+
+fpath+=('/home/reus/.nvm/versions/node/v12.9.0/lib/node_modules/pure-prompt/functions')
+autoload -U promptinit; promptinit
+prompt pure
+
+
+conda() {
+  unset -f conda
+  . /home/$USER/anaconda3/etc/profile.d/conda.sh
+}
+
+
+alias jcert="java -jar /home/reus/HDD/software/etsviewer.jar"
+
+# #Plugins
+# plugins=(
+#   sudo
+#   kubectl
+#   httpie
+#   git
+#   zsh-autosuggestions
+#   docker
+#   copyfile
+# )
+
+
+zstyle ':completion:*' menu select
+autoload -U compinit && compinit
+
+
+# zplug
+source ~/.zplug/init.zsh
+zplug "zsh-users/zsh-history-substring-search"
+zplug "zsh-users/zsh-autosuggestions"
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
+zplug load
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=30'
+
+bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "$terminfo[kcud1]" history-substring-search-down
