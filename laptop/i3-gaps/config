@@ -45,7 +45,7 @@ bindsym XF86MonBrightnessDown exec bash /home/$USER/scripts/xbrightnessDown.bash
 floating_modifier Mod4
 
 # start a terminal
-bindsym Mod4+Return exec tilix
+bindsym Mod4+Return exec alacritty
 
 # kill focused window
 bindsym Mod4+Shift+q kill
