@@ -1,12 +1,10 @@
-###############################
-#      OH MY ZSH CONFIG       #
-###############################
 
-TFJA_GITLAB_TOKEN=uJy_Uuxuxturnf3vRHUe
-
-
+# Kubectl config
 export  KUBECONFIG=$HOME/.kube/config
 export  KUBECONFIG=$KUBECONFIG:$HOME/.kube/microk8s.config
+
+# Change the default editor to nvim
+EDITOR="nvim"
 
 # GO
 export GOROOT=$HOME/software/go
