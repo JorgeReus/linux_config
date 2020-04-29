@@ -33,30 +33,27 @@ npm() {
  }
 
 
-fpath+=('/home/reus/.nvm/versions/node/v12.9.0/lib/node_modules/pure-prompt/functions')
-autoload -U promptinit; promptinit
-prompt pure
+#fpath+=('/home/reus/.nvm/versions/node/v12.9.0/lib/node_modules/pure-prompt/functions')
+#autoload -U promptinit; promptinit
+#prompt pure
 
-
-conda() {
-  unset -f conda
-  . /home/$USER/anaconda3/etc/profile.d/conda.sh
-}
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/reus/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/reus/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/reus/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/reus/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
 
 
 alias jcert="java -jar /home/reus/HDD/software/etsviewer.jar"
-
-# #Plugins
-# plugins=(
-#   sudo
-#   kubectl
-#   httpie
-#   git
-#   zsh-autosuggestions
-#   docker
-#   copyfile
-# )
-
 
 zstyle ':completion:*' menu select
 autoload -U compinit && compinit
@@ -76,3 +73,15 @@ bindkey "$terminfo[kcud1]" history-substring-search-down
 
 
 m8s() { sudo microk8s."$@";  }
+
+source /home/reus/.config/broot/launcher/bash/br
+
+#alias ls="broot -hsp"
+fpath=($fpath "/home/reus/.zfunctions")
+
+SPACESHIP_PROMPT_ADD_NEWLINE=false
+
+# Set Spaceship ZSH as a prompt
+autoload -U promptinit; promptinit
+prompt spaceship
+fpath=($fpath "/home/reus/.zfunctions")
