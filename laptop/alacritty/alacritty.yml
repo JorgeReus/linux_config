@@ -1,3 +1,6 @@
+shell:
+  program: /bin/zsh
+
 window:
   # Spread additional padding evenly around the terminal content.
   dynamic_padding: false

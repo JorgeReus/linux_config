@@ -46,6 +46,7 @@ floating_modifier Mod4
 
 # start a terminal
 bindsym Mod4+Return exec alacritty
+bindsym Ctrl+e exec alacritty -e ranger
 
 # kill focused window
 bindsym Mod4+Shift+q kill

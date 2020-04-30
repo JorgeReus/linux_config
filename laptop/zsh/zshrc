@@ -5,6 +5,7 @@
 
 #Paths
 export EDITOR="nvim"
+export VISUAL="nvim"
 export PATH="/home/$USER/anaconda3/bin:$PATH"
 export SDKMAN_DIR="/home/reus/.sdkman"
 source $HOME/.sdkman/bin/sdkman-init.sh
@@ -71,12 +72,23 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=30'
 bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
 
+# Ranger integration
+run_ranger () {
+    echo
+    ranger --choosedir=$HOME/.rangerdir < $TTY
+    LASTDIR=`cat $HOME/.rangerdir`
+    cd "$LASTDIR"
+    zle reset-prompt
+}
+
+zle -N ranger run_ranger
+# bindkey "^e" ranger
+
 
 m8s() { sudo microk8s."$@";  }
 
 source /home/reus/.config/broot/launcher/bash/br
 
-#alias ls="broot -hsp"
 fpath=($fpath "/home/reus/.zfunctions")
 
 SPACESHIP_PROMPT_ADD_NEWLINE=false
@@ -85,3 +97,4 @@ SPACESHIP_PROMPT_ADD_NEWLINE=false
 autoload -U promptinit; promptinit
 prompt spaceship
 fpath=($fpath "/home/reus/.zfunctions")
+
