@@ -20,23 +20,23 @@ tabspaces: 4
 # Font configuration
 font:
   normal:
-    family: Inconsolata Nerd Font
+    family: Hack
     style: Regular
 
   bold:
-    family: Inconsolata Nerd Font
+    family: Hack
     style: Bold
 
   italic:
-    family: Inconsolata Nerd Font
+    family: Hack
     style: Italic
 
   bold_italic:
-    family: Inconsolata Nerd Font
+    family: Hack
     style: Bold Italic
 
   # Point size
-  size: 8.0
+  size: 7.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
