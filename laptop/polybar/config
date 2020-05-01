@@ -43,7 +43,7 @@ font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=12;3"
 font-3 = "Font Awesome 5 Brands:style=Solid:pixelsize=12;3"
 font-4 = "darksouls:style=Regular:size=22;7"
 
-modules-left = i3 powermenu  battery
+modules-left = powermenu  battery i3
 modules-center = xwindow
 modules-right = filesystem pulseaudio memory cpu network eth temperature date
 
@@ -88,6 +88,7 @@ label-indicator-underline = ${colors.secondary}
 [module/filesystem]
 type = internal/fs
 interval = 25
+label-mounted-foreground = ${colors.accent}
 
 mount-0 = /
 
@@ -186,20 +187,17 @@ card = intel_backlight
 type = internal/cpu
 interval = 2
 format-prefix = ""
-format-prefix-foreground = ${root.foreground}
-format-underline = #f90000
+format-prefix-foreground = ${colors.accent}
+; format-underline = #f90000
 label = %percentage:2%%
 
 [module/memory]
 type = internal/memory
-interval = 2
 format-prefix = " "
-format-prefix-foreground = ${root.foreground}
-format-underline = #4bffdc
+format-prefix-foreground = ${colors.accent}
+; format-underline = #4bffdc
 label = %percentage_used%%
-
 [module/network]
-label-active-font = 3
 interval = 1.0
 type = internal/network
 interface = wlp2s0
@@ -210,7 +208,7 @@ format-disconnected = <label-disconnected>
 format-packetloss = <animation-packetloss> <label-connected>
 
 label-connected = %essid% %signal% 
-label-connected-foreground = #eefafafa
+ramp-signal-foreground = ${colors.accent}
 
 label-disconnected = not connected
 label-disconnected-foreground = #66ffffff
@@ -229,9 +227,9 @@ type = internal/network
 interface = wlp2s0
 interval = 3.0
 
-format-connected-underline = #55aa55
+; format-connected-underline = #55aa55
 format-connected-prefix = " " 
-format-connected-prefix-foreground = ${root.foreground}
+format-connected-prefix-foreground = ${colors.accent}
 label-connected = %local_ip%
 
 format-disconnected =
@@ -248,8 +246,7 @@ time = %H:%M
 time-alt = %H:%M:%S
 
 format-prefix = 
-format-prefix-foreground = ${root.foreground}
-format-underline = #0a6cf5
+format-prefix-foreground = ${colors.accent}
 
 label = %date% %time%
 
@@ -258,6 +255,7 @@ label = %date% %time%
 type = internal/pulseaudio
 
 format-volume = <ramp-volume> <label-volume>
+ramp-volume-foreground = ${colors.accent}
 label-volume = %percentage%%
 label-volume-foreground = ${root.foreground}
 
@@ -270,10 +268,9 @@ ramp-volume-2 = 
 [module/temperature]
 type = internal/temperature
 thermal-zone = 0
-warn-temperature = 60
+warn-temperature = 70
 
 format = <ramp> <label>
-format-underline = #f50a4d
 format-warn = <ramp> <label-warn>
 format-warn-underline = ${self.format-underline}
 
@@ -286,7 +283,7 @@ ramp-1 = 
 ramp-2 = 
 ramp-3 = 
 ramp-4 = 
-ramp-foreground = ${root.foreground}
+ramp-foreground = ${colors.accent}
 
 
 [module/battery]
